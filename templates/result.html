@@ -1,0 +1,14 @@
+{% block body %}
+
+    <div style="padding:10%">
+        <center style="font-size:1.75em;">Paragraphs list</center><br><br>
+        {% for i in paraList %}
+        <div>{{i}}</div> <br><br>
+        {% endfor %}
+    </div>
+
+    <center>
+        <a href="/clear/"><button>CLEAR</button></a>
+    </center>
+
+{% endblock %}
