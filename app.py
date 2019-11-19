@@ -101,4 +101,3 @@ def clear():
 
     return redirect(url_for('indexing'))
 
-app.run()
