@@ -54,7 +54,7 @@ def indexing():
                 return "Please upload valid file."
 
             else :
-                if not os.path.exists("os.path.dirname(os.path.realpath(__file__)) + '/pdfs"):
+                if not os.path.exists(os.path.dirname(os.path.realpath(__file__)) + '/pdfs'):
                     os.mkdir("pdfs")
                     
                 path = os.path.dirname(os.path.realpath(__file__)) + '/pdfs/'+f.filename
@@ -96,9 +96,10 @@ def clear():
     paras = []
     wordsList = []
     index = dict()
-    if os.path.exists("os.path.dirname(os.path.realpath(__file__)) + '/pdfs"):
+    if os.path.exists(os.path.dirname(os.path.realpath(__file__)) + '/pdfs'):
         shutil.rmtree("pdfs")
-        os.mkdir("pdfs")
 
     return redirect(url_for('indexing'))
 
+
+app.run()
