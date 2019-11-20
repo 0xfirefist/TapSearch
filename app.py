@@ -96,8 +96,9 @@ def clear():
     paras = []
     wordsList = []
     index = dict()
-    shutil.rmtree("pdfs")
-    os.mkdir("pdfs")
+    if os.path.exists("os.path.dirname(os.path.realpath(__file__)) + '/pdfs"):
+        shutil.rmtree("pdfs")
+        os.mkdir("pdfs")
 
     return redirect(url_for('indexing'))
 
